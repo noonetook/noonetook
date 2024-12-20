@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Girl Love</title>
+</head>
+<body>
+    <h1>Support Anime Girl</h1>
+    <button onclick="makeHappy(1)">Donate $1</button>
+    <button onclick="makeHappy(10)">Donate $10</button>
+    <button onclick="makeHappy(50)">Donate $50</button>
+    <audio id="happySound" src="happy.mp3"></audio>
+    <script>
+        function makeHappy(amount) {
+            let message = '';
+            if (amount === 1) {
+                message = 'Thank you!';
+            } else if (amount === 10) {
+                message = 'Love you! Thank you a lot!';
+            } else if (amount === 50) {
+                message = 'You make me so happy!';
+            }
+            alert(message);
+            document.getElementById('happySound').play();
+        }
+    </script>
+</body>
+</html>
